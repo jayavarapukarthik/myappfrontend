@@ -1,0 +1,80 @@
+/* Parent container styling */
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Increased gap for better spacing */
+    padding: 20px; /* Adds padding around the container */
+    background-color: #f9f9f9; /* Subtle background color */
+    
+}
+
+/* Individual product card styling */
+.child {
+    border: 1px solid #ddd; /* Light gray border */
+    padding: 20px;
+    border-radius: 15px;
+    width: 280px; /* Slightly reduced width */
+    height: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+    background-color: white;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover animations */
+    text-align: center; /* Center aligns content */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space between content */
+}
+
+/* Hover effect on cards */
+.child:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    cursor: pointer; /* Pointer cursor for interactivity */
+}
+
+/* Product image styling */
+.child img {
+    max-width: 100%; /* Ensures image fits the container */
+    height: 300px; 
+    object-fit: cover; /* Ensures proper cropping */
+    border-radius: 10px; /* Slightly rounded corners */
+    margin-bottom: 10px; /* Space below the image */
+    background-size:cover ;
+    
+}
+
+/* Product name styling */
+.child h5 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333; /* Dark text for readability */
+    margin: 5px;
+    text-transform: capitalize; /* Ensures proper case for product names */
+    overflow: hidden; /* Handles overflow text */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Product cost styling */
+.child h6 {
+    
+    font-size: 12px;
+    font-weight: 600;
+    color: #ff5722; /* Attractive orange color for price */
+    margin-top: 12px;
+    /* padding: px; */
+}
+
+/* Add hover effect for images */
+.child img:hover {
+    opacity: 0.9; /* Slight dim effect */
+}
+
+/* Overall responsive design */
+@media (max-width: 768px) {
+    .child {
+        width: 100%; /* Full width for smaller screens */
+        height: auto;
+    }
+}

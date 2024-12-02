@@ -1,0 +1,90 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Makes the dashboard fill the viewport */
+    background: linear-gradient(250deg, #1d976c, #93f9b9);
+ /* Attractive gradient background */
+    color: white;
+    font-family: Arial, sans-serif;
+    padding-top: 40px;
+}
+
+.dashboard-menu {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.dashboard-menu a {
+    text-decoration: none;
+    background: #444;
+    padding: 20px 30px;
+    color: white;
+    width: 180px; /* Increased width for better spacing */
+    text-align: center;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adds depth to buttons */
+    transition: all 0.3s ease;
+}
+
+.dashboard-menu a:hover {
+    background: #ffa500; /* Hover color for interactivity */
+    color: #000; /* Change text color on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+.dashboard-header {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .dashboard {
+        padding-top: 20px; /* Reducing padding for small screens */
+    }
+
+    .dashboard-header {
+        font-size: 28px; /* Slightly smaller header on mobile */
+        margin-bottom: 20px; /* Reduced margin */
+    }
+
+    .dashboard-menu {
+        flex-direction: column; /* Stack the menu items vertically */
+        gap: 15px;
+        padding: 10px; /* Reduced padding for mobile */
+    }
+
+    .dashboard-menu a {
+        width: 100%; /* Full width for the buttons */
+        padding: 15px;
+        font-size: 16px; /* Slightly smaller font size for mobile */
+    }
+
+    .dashboard-menu a:hover {
+        transform: scale(1.05); /* Less zoom effect for mobile */
+    }
+}
+
+/* Extra Small Mobile Responsiveness */
+@media (max-width: 480px) {
+    .dashboard-header {
+        font-size: 24px; /* Even smaller header size for very small screens */
+    }
+
+    .dashboard-menu a {
+        padding: 12px;
+        font-size: 14px; /* Smaller font size for very small screens */
+    }
+}
